@@ -103,6 +103,7 @@ class EventLoop(base_events.BaseEventLoop):
 
         del self._loop._rose_loop
         self._loop = None
+        super().close()
 
     def is_running(self):
         return self._running
